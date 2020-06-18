@@ -186,3 +186,449 @@ complex structures or difficult words. You may also decide to teach language for
 situation that is not found in your textbook or personalize the dialogue to your students’ needs and interests. These are instances where you will want to adapt or write
 your own dialogues. Here are some points to keep in mind when writing or adapting dialogues for students to practice (based on Slager 1976 cited in Omaggio 1984
 and Graham 1992).
+To find out the difference between these terms you need to know some of the machine learning terms like Gradient Descent to help you better understand.
+Here is a short summary on Gradient Descent…
+Gradient Descent
+It is an iterative optimization algorithm used in machine learning to find the best results (minima of a curve).
+Gradient means the rate of inclination or declination of a slope.
+Descent means the instance of descending.
+The algorithm is iterative means that we need to get the results multiple times to get the most optimal result. The iterative quality of the gradient descent helps a under-fitted graph to make the graph fit optimally to the data.
+
+Source
+The Gradient descent has a parameter called learning rate. As you can see above (left), initially the steps are bigger that means the learning rate is higher and as the point goes down the learning rate becomes more smaller by the shorter size of steps. Also,the Cost Function is decreasing or the cost is decreasing .Sometimes you might see people saying that the Loss Function is decreasing or the loss is decreasing, both Cost and Loss represent same thing (btw it is a good thing that our loss/cost is decreasing).
+We need terminologies like epochs, batch size, iterations only when the data is too big which happens all the time in machine learning and we can’t pass all the data to the computer at once. So, to overcome this problem we need to divide the data into smaller sizes and give it to our computer one by one and update the weights of the neural networks at the end of every step to fit it to the data given.
+Epochs
+One Epoch is when an ENTIRE dataset is passed forward and backward through the neural network only ONCE.
+Since one epoch is too big to feed to the computer at once we divide it in several smaller batches.
+Why we use more than one Epoch?
+I know it doesn’t make sense in the starting that — passing the entire dataset through a neural network is not enough. And we need to pass the full dataset multiple times to the same neural network. But keep in mind that we are using a limited dataset and to optimise the learning and the graph we are using Gradient Descent which is an iterative process. So, updating the weights with single pass or one epoch is not enough.
+One epoch leads to underfitting of the curve in the graph (below).
+
+As the number of epochs increases, more number of times the weight are changed in the neural network and the curve goes from underfitting to optimal to overfitting curve.
+So, what is the right numbers of epochs?
+Unfortunately, there is no right answer to this question. The answer is different for different datasets but you can say that the numbers of epochs is related to how diverse your data is… just an example - Do you have only black cats in your dataset or is it much more diverse dataset?
+Batch Size
+Total number of training examples present in a single batch.
+Note: Batch size and number of batches are two different things.
+But What is a Batch?
+As I said, you can’t pass the entire dataset into the neural net at once. So, you divide dataset into Number of Batches or sets or parts.
+Just like you divide a big article into multiple sets/batches/parts like Introduction, Gradient descent, Epoch, Batch size and Iterations which makes it easy to read the entire article for the reader and understand it. 😄
+Iterations
+To get the iterations you just need to know multiplication tables or have a calculator. 😃
+Iterations is the number of batches needed to complete one epoch.
+Note: The number of batches is equal to number of iterations for one epoch.
+Let’s say we have 2000 training examples that we are going to use .
+We can divide the dataset of 2000 examples into batches of 500 then it will take 4 iterations to complete 1 epoch.
+Where Batch Size is 500 and Iterations is 4, for 1 complete epoch.
+
+Follow me on Medium to get similar posts.
+Contact me on Facebook, Twitter, LinkedIn, Google+
+Any comments or if you have any question, write it in the comment.
+Clap it! Share it! Follow Me !
+Happy to be helpful. kudos…..
+ where (a, b)
+and (c, d) have the same relation. We used
+the Google, MSR, and SemEval 2012 Task 2
+datasets (Mikolov et al., 2013b).
+c) Categorization tasks are yet another commonly used tasks for intrinsic evaluation of
+word embeddings, which involve evaluating
+the purity of clusters formed by word embeddings. We used the AP, BLESS, ESSLI 1a,
+ESSLI 2b, and ESSLI 2c datasets (Schnabel
+et al., 2015).
+6 Results and Analysis
+Figure 2 shows the effects of increasing dimensions from 1 to 35 on different tasks. One observes that each series ascends till the number of
+dimensions reach 19, after which it stabilizes. This
+is because once the lower bound is reached, the
+errors introduced due to the violation of equality
+constraint are removed. Thus, the optimal performance possible with the selected configurations is
+reached, and the performance stabilizes thereafter.
+Note that, in some cases, the performance stabilizes before 19. This is because, for that particular
+dataset and task, the equality constraints that are
+broken at lower than 19 dimensions did not matter. But, for a realistic use case, one would be better off if they stick to the lower bound.
+7 Conclusion and Future Work
+We discussed the importance of deciding the number of dimensions for word embedding training by
+looking at the corpus. We motivated the idea using abstract examples and gave an algorithm for
+finding the lower bound. Our experiments showed
+that performance of word embeddings is poor, until the lower bound is reached. Thereafter, it stabilizes. Therefore, such bounds should be used to
+decide the number of dimensions, instead of trial
+We aim to continue the work, addressing the
+limitations of complexity, the validity of hypothesis in extrinsic tasks, etc.. We will also investigate
+whether the same holds for different word embedding models.
+Acknowledgements
+We thank Arjun Atreya, Anoop Kunchukuttan,
+Aditya Joshi, Abhijit Mishra and other members
+of the Center for Indian Language Technology
+(CFILT) for valuable discussions and feedback.
+References
+Alexander Barg and Wei-Hsuan Yu. 2014. New bounds
+for equiangular lines. Contemporary Mathematics
+625.0:111–121.
+Marco Baroni, Georgiana Dinu, and German´
+Kruszewski. 2014. Don’t count, predict! a
+systematic comparison of context-counting vs.
+context-predicting semantic vectors. In Proceedings
+of the 52nd Annual Meeting of the Association
+for Computational Linguistics (Volume 1: Long
+Papers). Association for Computational Linguistics,
+pages 238–247.
+Yoshua Bengio, Rejean Ducharme, Pascal Vincent, ´
+and Christian Janvin. 2003. A neural probabilistic language model. Journal of Machine Learning
+Research 3.0:1137–1155.
+Ronan Collobert and Jason Weston. 2008. A unified architecture for natural language processing:
+deep neural networks with multitask learning. In
+Machine Learning, Proceedings of the Twenty-Fifth
+International Conference (ICML). ACM, volume
+307.0, pages 160–167.
+Dominique de Caen. 2000. Large equiangular sets
+of lines in euclidean space. Electronic Journal of
+Combinatorics 7.0.
+Manaal Faruqui and Chris Dyer. 2014. Community evaluation and exchange of word vectors at
+wordvectors.org. In Proceedings of 52nd Annual
+Meeting of the Association for Computational
+Linguistics: System Demonstrations. Association
+for Computational Linguistics, pages 19–24.
+Sahar Ghannay, Benoit Favre, Yannick Estve, and
+Nathalie Camelin. 2016. Word embedding evaluation and combination. In Proceedings of the Tenth
+International Conference on Language Resources
+and Evaluation (LREC). European Language Resources Association (ELRA).
+Chris Godsil and Aidan Roy. 2009. Equiangular
+lines, mutually unbiased bases, and spin models.
+European Journal of Combinatorics 30.0:246–262.
+Eric Huang, Richard Socher, Christopher Manning,
+and Andrew Ng. 2012. Improving word representations via global context and multiple word prototypes. In Proceedings of the 50th Annual Meeting
+of the Association for Computational Linguistics
+(Volume 1: Long Papers). Association for Computational Linguistics, pages 873–882.
+Aditya Joshi, Vaibhav Tripathi, Kevin Patel, Pushpak
+Bhattacharyya, and Mark Carman. 2016. Are word
+embedding-based features useful for sarcasm detection? In Proceedings of the 2016 Conference on
+Empirical Methods in Natural Language Processing.
+Association for Computational Linguistics, pages
+1006–1011.
+Yoon Kim. 2014. Convolutional neural networks
+for sentence classification. In Proceedings of the
+2014 Conference on Empirical Methods in Natural
+Language Processing (EMNLP). Association for
+Computational Linguistics, pages 1746–1751.
+Thomas K. Landauer and Susan T. Dumais. 1997. A
+solution to Plato’s problem: The latent semantic
+analysis theory of acquisition, induction, and representation of knowledge. Psychological Review
+104.0:211–240.
+Petrus WH Lemmens and Johan J Seidel. 1973.
+Equiangular lines. Journal of Algebra 24.0:494–
+Dashing through the snow
+In a one horse open sleigh
+Over the fields we go
+Laughing all the way
+Bells on bobtail ring
+Making spirits bright
+What fun it is to laugh and sing
+A sleighing song tonight!
+Oh, jingle bells, jingle bells
+Jingle all the way
+Oh! what fun it is to ride
+In a one horse open sleigh, hey
+Jingle bells, jingle bells
+Jingle all the way
+Oh! what fun it is to ride
+In a one horse open sleigh
+Now the ground is white
+Go it while you're young
+Take the girls tonight
+And sing this sleighing song
+Just get a bobtailed bay
+Two forty as his speed
+Hitch him to an open sleigh
+And crack! You'll take the lead
+Jingle bells, jigle bells
+Jingle all the way
+Oh, what fun it is to ride
+In one horse open sleigh, hey
+Jingle bells, jingle bells
+Jingle all the way
+Oh, what fun it is to ride
+In one horse open sleigh
+Oh, what fun it is to ride
+In one horse open sleigh..
+Drills as Language Teaching Material
+Definition and Uses of Drills
+A drill is “A type of highly controlled oral practice in which the students respond to
+a given cue. The response varies according to the type of drill.” (Matthews, Spratt,
+and Dangerfield 1991, 210). Drills are used usually at the controlled practice stage
+of language learning so that students have the opportunity to accurately try out
+what they have learned. Drills help students to develop quick, automatic responses
+using a specific formulaic expression or structure, such as a tag ending, verb form,
+or transformation.
+Drills have been much maligned for their behavioristic, stimulus-response
+nature and for the mechanical, repetitive practice they provide. In classrooms that
+use the audiolingual method, which became popular in the 1950s, drills are basic
+to language teaching.
+Many of us know that drill-based lessons are not always particularly stimulating. In fact, you may remember language drills in which you could accurately
+respond in the drill without knowing what you were saying. There’s a joke among
+language teachers: “Dictionary definition: Drill—a device for boring” (Hubbard
+1990, 19). However, drills do respond to the learning style of those who learn well
+through memorization and repetition.
+Drills can be useful teaching-learning material because they provide practice of
+small, manageable chunks of language. This helps to build confidence and automatic use of structures and expressions that have been drilled. Also, they can be
+part of a teaching or learning sequence that progresses from more towards less controlled practice.
+Mary Spratt (1991) notes that drills can be either mechanical or meaningful.
+Mechanical drills are controlled by the teacher who provides drill cues to which 
+Drills, Dialogues, and Role Plays 3
+students respond. These drills can give beginning students a chance to articulate the
+new language fluently. Meaningful drills are controlled by the teacher as well as by
+the students who must understand the drill cues in order to respond. Meaningful
+drills are more desirable than mechanical drills because they provide a reason for
+speaking and are thus more engaging and motivating. Spratt (10–11) points out
+these requisites for meaningful drills:
+• They should look like real language, containing hesitations, proper social
+reactions such as exclamations, questions, or comments that require a
+response. They can even consider register and nonverbal elements.
+• The response should not be totally predictable; a variety of responses should
+be incorporated.
+• They should involve genuine reactions between or among the speakers.
+• They should be purposeful and based on topics of relevance to students
+• They should be sufficiently controlled and allow the teacher to observe how
+well learning has taken place.
+• They should allow for sustained language practice.
+Types of Drills
+A drill is a drill is a drill, right? Not so! They come in various forms—repetition
+drills, substitution drills, and transformation drills are among the main types. Each
+type of drill can be meaningful or mechanical, depending upon how you develop
+it. We will explain several types of drills on the following pages.
+Repetition Drills
+Repetition drills are useful for familiarizing students quickly with a specific structure or formulaic expression (Doff 1990, 71). The teacher’s language is repeated
+with no change. Be sure to teach the meaning of the utterance first. The example
+that follows illustrates this type of drill:
+Teacher: It’s cold outside.
+Students: It’s cold outside.
+Teacher: It’s warm outside.
+Students: It’s warm outside.
+Because repetition drills are extremely mechanical, they should not be used for prolonged practice. Preferably they should lead quickly into another kind of drill or
+oral practice activity that allows students to manipulate the form being practiced in
+meaningful and relevant ways.
+Substitution Drills
+Substitution drills are slightly more interactive than repetition drills because they
+usually give students practice in changing a word or structure in response to a
+prompt or cue from the teacher or another student. The teacher’s prompt can be a
+whole sentence, a word, a phrase, or a picture. Here is a mechanical substitution
+drill using a single-word (in italics) prompt:
+Presenting Drills
+When presenting drills, provide students with a written example on a handout or
+on the board or as a transparency. Model the drill with another student, or have
+two students model the drill for the rest of the class. If you are conducting the drill,
+observe student responses carefully to assess learning. If students are working in
+pairs or groups, circulate and observe, assisting where necessary. Be sure to end the
+drill before it becomes tedious. You can do a follow-up, especially to meaningful
+drills, by having each student write up the drill as a dialogue.
+Drills are often presented with the teacher at the front of the class and the students responding. You can add variety by tossing a ball or beanbag to the student
+who is to respond. This keeps everyone alert because they cannot anticipate who
+will be called on next. In a question-answer drill format, the student who receives
+the ball responds to you and then asks a question of the next student who is to
+receive the ball.
+Chain drills also add variety. Rather than having all the students repeat the
+same thing, have students sit in a circle or semicircle. Then have one student ask the
+next student a question to which he or she responds as in this example of a class of
+five students. If you have a large class, you can have several circles of up to ten students doing this activity while you circulate. Note that you start by modeling what
+is expected.
+Teacher: My name is Mary, and I like eating. What about you?
+Student 1: My name is Earnest, and I like reading. What about you?
+Student 2: My name is Anatoli, and I like camping. What about you?
+Student 3: My name is Marina, and I like singing. What about you?
+Student 4: My name is Martin, and I like swimming. What about you?
+Student 5: My name is Svetlana, and I like dating! What about you?
+For more advanced students, this model can be used:
+Teacher: My name is Ruth, and I’ve always wanted to be a gypsy. What
+have you always wanted to do?
+Student 1: My name is XingXing, and I’ve always wanted to be a rock star.
+What have you always wanted to do?
+Student 2: My name is Chinghua, and I’ve wanted to be a snowboard champion. What have you always wanted to do?
+6 Tools and Tips for Using ELT Materials—Web Only
+And, for extra challenge, try this:
+Teacher: My name is Ruth, and I’ve always wanted to be a gypsy. How
+about you?
+Student 1: Your name is Ruth, and you’ve always wanted to be a gypsy. My
+name is XingXing, and I’ve always wanted to be a rock star.
+Student 2: Your name is Ruth, and you’ve always wanted to be a gypsy. Her
+name is XingXing, and she’s always wanted to be a rock star. My
+name is Chinghua, and I’ve always wanted to be a snowboard
+champion.
+Student 3: Your name is Ruth, and you’ve always wanted to be a gypsy. Her
+name is XingXing, and she’s always wanted to be a rock star. Her
+name is Chinghua, and she’s always wanted to be a snowboard
+champion. My name is Xiaohui, and I’ve always wanted to be a
+concert pianist.
+This drill ends with you repeating the aspirations of the entire class. Obviously, you
+shouldn’t try this with groups larger than about fifteen students. The next section
+deals with dialogues.
+Dialogues as Language Teaching Material
+Dialogues, Definition, Uses, and Adaptations
+Dialogues are popular activities in ESL textbooks for a number of linguistic as well
+as cultural reasons. You can use or adapt dialogues to:
+• demonstrate grammar in context
+• facilitate conversation—This may parallel grammar instruction, but also
+gives specific language practice, for example, use of gambits and formulaic
+expression or language. Gambits and formulaic expression or language are
+common phrases or multiword units found useful in developing fluency in
+both adults and children (Wood 2002).
+• provide recreation such as a skit—These dialogues are bridging activities that
+provide spontaneous use of learner knowledge.
+Dialogues usually present spoken language within a context and are thus typically longer than drills. However, those used for oral practice should be short so
+students remember them.
+Dialogues are primarily used to provide speaking practice but can also develop
+listening. You can use dialogues to introduce and practice a function, structure, or
+vocabulary, and to illustrate degrees of politeness, levels of formality, and values
+and attitudes of the target culture. You can also work with students to analyze written dialogues for any of these features. Dialogues are useful for listening to and
+practicing pronunciation, intonation, and other phonological features. Like drills,
+they are usually materials for guided, rather than free, language practice.
+You can combine dialogues with writing by having students make comics with
+pictures and bubble dialogue boxes to fill in. You may develop longer dialogues to
+provide a stimulus to problem solving and discussion about a topic. For example,
+Drills, Dialogues, and Role Plays 7
+one dialogue in Jill Bell and Marjatta Holt (1988) focuses on discrimination and
+landlord and tenant rights. Longer dialogues are also useful for listening practice.
+Standard Printed Dialogues
+Printed dialogues usually consist of several short exchanges between two people, as
+in this shopping dialogue:
+A: Hello. May I help you?
+B: No thanks. I’m just looking.
+A: Well, let me know if you need anything.
+B: Okay, thank you.
+These kinds of dialogues are especially useful for introducing common expressions
+to beginners. It helps them to develop a bank of authentic expressions and vocabulary that they can use immediately. Students who have studied a lot of English
+grammar in an EFL situation can also benefit from dialogues that introduce them
+to genuine spoken language.
+Developing and Adapting Standard Dialogues
+You will find standard printed dialogues in many textbooks. You may find, however, that a textbook dialogue is not appropriate for some reason. For example, the
+expressions used are British and not what is heard in your teaching context, the language used does not sound natural or authentic, or the dialogue contains too many
+complex structures or difficult words. You may also decide to teach language for a
+situation that is not found in your textbook or personalize the dialogue to your students’ needs and interests. These are instances where you will want to adapt or write
+your own dialogues. Here are some points to keep in mind when writing or adapting dialogues for students to practice (based on Slager 1976 cited in Omaggio 1984
+and Graham 1992).
+To find out the difference between these terms you need to know some of the machine learning terms like Gradient Descent to help you better understand.
+Here is a short summary on Gradient Descent…
+Gradient Descent
+It is an iterative optimization algorithm used in machine learning to find the best results (minima of a curve).
+Gradient means the rate of inclination or declination of a slope.
+Descent means the instance of descending.
+The algorithm is iterative means that we need to get the results multiple times to get the most optimal result. The iterative quality of the gradient descent helps a under-fitted graph to make the graph fit optimally to the data.
+
+Source
+The Gradient descent has a parameter called learning rate. As you can see above (left), initially the steps are bigger that means the learning rate is higher and as the point goes down the learning rate becomes more smaller by the shorter size of steps. Also,the Cost Function is decreasing or the cost is decreasing .Sometimes you might see people saying that the Loss Function is decreasing or the loss is decreasing, both Cost and Loss represent same thing (btw it is a good thing that our loss/cost is decreasing).
+We need terminologies like epochs, batch size, iterations only when the data is too big which happens all the time in machine learning and we can’t pass all the data to the computer at once. So, to overcome this problem we need to divide the data into smaller sizes and give it to our computer one by one and update the weights of the neural networks at the end of every step to fit it to the data given.
+Epochs
+One Epoch is when an ENTIRE dataset is passed forward and backward through the neural network only ONCE.
+Since one epoch is too big to feed to the computer at once we divide it in several smaller batches.
+Why we use more than one Epoch?
+I know it doesn’t make sense in the starting that — passing the entire dataset through a neural network is not enough. And we need to pass the full dataset multiple times to the same neural network. But keep in mind that we are using a limited dataset and to optimise the learning and the graph we are using Gradient Descent which is an iterative process. So, updating the weights with single pass or one epoch is not enough.
+One epoch leads to underfitting of the curve in the graph (below).
+
+As the number of epochs increases, more number of times the weight are changed in the neural network and the curve goes from underfitting to optimal to overfitting curve.
+So, what is the right numbers of epochs?
+Unfortunately, there is no right answer to this question. The answer is different for different datasets but you can say that the numbers of epochs is related to how diverse your data is… just an example - Do you have only black cats in your dataset or is it much more diverse dataset?
+Batch Size
+Total number of training examples present in a single batch.
+Note: Batch size and number of batches are two different things.
+But What is a Batch?
+As I said, you can’t pass the entire dataset into the neural net at once. So, you divide dataset into Number of Batches or sets or parts.
+Just like you divide a big article into multiple sets/batches/parts like Introduction, Gradient descent, Epoch, Batch size and Iterations which makes it easy to read the entire article for the reader and understand it. 😄
+Iterations
+To get the iterations you just need to know multiplication tables or have a calculator. 😃
+Iterations is the number of batches needed to complete one epoch.
+Note: The number of batches is equal to number of iterations for one epoch.
+Let’s say we have 2000 training examples that we are going to use .
+We can divide the dataset of 2000 examples into batches of 500 then it will take 4 iterations to complete 1 epoch.
+Where Batch Size is 500 and Iterations is 4, for 1 complete epoch.
+
+Follow me on Medium to get similar posts.
+Contact me on Facebook, Twitter, LinkedIn, Google+
+Any comments or if you have any question, write it in the comment.
+Clap it! Share it! Follow Me !
+Happy to be helpful. kudos…..
+ where (a, b)
+and (c, d) have the same relation. We used
+the Google, MSR, and SemEval 2012 Task 2
+datasets (Mikolov et al., 2013b).
+c) Categorization tasks are yet another commonly used tasks for intrinsic evaluation of
+word embeddings, which involve evaluating
+the purity of clusters formed by word embeddings. We used the AP, BLESS, ESSLI 1a,
+ESSLI 2b, and ESSLI 2c datasets (Schnabel
+et al., 2015).
+6 Results and Analysis
+Figure 2 shows the effects of increasing dimensions from 1 to 35 on different tasks. One observes that each series ascends till the number of
+dimensions reach 19, after which it stabilizes. This
+is because once the lower bound is reached, the
+errors introduced due to the violation of equality
+constraint are removed. Thus, the optimal performance possible with the selected configurations is
+reached, and the performance stabilizes thereafter.
+Note that, in some cases, the performance stabilizes before 19. This is because, for that particular
+dataset and task, the equality constraints that are
+broken at lower than 19 dimensions did not matter. But, for a realistic use case, one would be better off if they stick to the lower bound.
+7 Conclusion and Future Work
+We discussed the importance of deciding the number of dimensions for word embedding training by
+looking at the corpus. We motivated the idea using abstract examples and gave an algorithm for
+finding the lower bound. Our experiments showed
+that performance of word embeddings is poor, until the lower bound is reached. Thereafter, it stabilizes. Therefore, such bounds should be used to
+decide the number of dimensions, instead of trial
+We aim to continue the work, addressing the
+limitations of complexity, the validity of hypothesis in extrinsic tasks, etc.. We will also investigate
+whether the same holds for different word embedding models.
+Acknowledgements
+We thank Arjun Atreya, Anoop Kunchukuttan,
+Aditya Joshi, Abhijit Mishra and other members
+of the Center for Indian Language Technology
+(CFILT) for valuable discussions and feedback.
+References
+Alexander Barg and Wei-Hsuan Yu. 2014. New bounds
+for equiangular lines. Contemporary Mathematics
+625.0:111–121.
+Marco Baroni, Georgiana Dinu, and German´
+Kruszewski. 2014. Don’t count, predict! a
+systematic comparison of context-counting vs.
+context-predicting semantic vectors. In Proceedings
+of the 52nd Annual Meeting of the Association
+for Computational Linguistics (Volume 1: Long
+Papers). Association for Computational Linguistics,
+pages 238–247.
+Yoshua Bengio, Rejean Ducharme, Pascal Vincent, ´
+and Christian Janvin. 2003. A neural probabilistic language model. Journal of Machine Learning
+Research 3.0:1137–1155.
+Ronan Collobert and Jason Weston. 2008. A unified architecture for natural language processing:
+deep neural networks with multitask learning. In
+Machine Learning, Proceedings of the Twenty-Fifth
+International Conference (ICML). ACM, volume
+307.0, pages 160–167.
+Dominique de Caen. 2000. Large equiangular sets
+of lines in euclidean space. Electronic Journal of
+Combinatorics 7.0.
+Manaal Faruqui and Chris Dyer. 2014. Community evaluation and exchange of word vectors at
+wordvectors.org. In Proceedings of 52nd Annual
+Meeting of the Association for Computational
+Linguistics: System Demonstrations. Association
+for Computational Linguistics, pages 19–24.
+Sahar Ghannay, Benoit Favre, Yannick Estve, and
+Nathalie Camelin. 2016. Word embedding evaluation and combination. In Proceedings of the Tenth
+International Conference on Language Resources
+and Evaluation (LREC). European Language Resources Association (ELRA).
+Chris Godsil and Aidan Roy. 2009. Equiangular
+lines, mutually unbiased bases, and spin models.
+European Journal of Combinatorics 30.0:246–262.
+Eric Huang, Richard Socher, Christopher Manning,
+and Andrew Ng. 2012. Improving word representations via global context and multiple word prototypes. In Proceedings of the 50th Annual Meeting
+of the Association for Computational Linguistics
+(Volume 1: Long Papers). Association for Computational Linguistics, pages 873–882.
+Aditya Joshi, Vaibhav Tripathi, Kevin Patel, Pushpak
+Bhattacharyya, and Mark Carman. 2016. Are word
+embedding-based features useful for sarcasm detection? In Proceedings of the 2016 Conference on
+Empirical Methods in Natural Language Processing.
+Association for Computational Linguistics, pages
+1006–1011.
+Yoon Kim. 2014. Convolutional neural networks
+for sentence classification. In Proceedings of the
+2014 Conference on Empirical Methods in Natural
+Language Processing (EMNLP). Association for
+Computational Linguistics, pages 1746–1751.
+Thomas K. Landauer and Susan T. Dumais. 1997. A
+solution to Plato’s problem: The latent semantic
+analysis theory of acquisition, induction, and representation of knowledge. Psychological Review
+104.0:211–240.
+Petrus WH Lemmens and Johan J Seidel. 1973.
+Equiangular lines. Journal of Algebra 24.0:494–
